@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './mvnw clean install'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Run Docker Image'){
             steps{
-                sh 'docker run -d -p 8081:8081 --name jenkins-aws-projr'
+                sh 'docker run -d -p 8081:8081 --name jenkins-aws-proj'
             }
         }
 
