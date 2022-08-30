@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Run Docker Image'){
             steps{
-                bat 'docker run -d -p 8082:8082 --name jenkins-aws-proj jenkins-aws-proj'
+                bat 'docker run -d -p 8082:8083 --name jenkins-aws-proj jenkins-aws-proj'
             }
         }
 
